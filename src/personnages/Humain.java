@@ -83,11 +83,16 @@ public class Humain {
 	
 	public void listerConnaissance() {
 		StringBuilder connais = new StringBuilder();
-		for (int i = 0; i < nbConnaissance - 1; i++) {
-			connais.append(memoire[i].getNom() + ", ");
+		if(nbConnaissance < 1) {
+			parler("Je ne peux faire ami ami avec personne car je ne connais personne ! Snif.");
 		}
-		connais.append(memoire[nbConnaissance-1].getNom()); 
-		parler("Je connais beaucoup de monde dont : " + connais);
+		else {
+			for (int i = 0; i < nbConnaissance - 1; i++) {
+				connais.append(memoire[i].getNom() + ", ");
+			}
+			connais.append(memoire[nbConnaissance-1].getNom()); 
+			parler("Je connais beaucoup de monde dont : " + connais);
+		}
 	}
 
 }
