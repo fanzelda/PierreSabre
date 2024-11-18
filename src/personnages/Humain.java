@@ -40,8 +40,8 @@ public class Humain {
 		parler("Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonFavorite + ".");
 	}
 
-	public void boire(String boisson) {
-		parler("Mmmm, un bon verre de " + boisson + " ! GLOUPS !");
+	public void boire() {
+		parler("Mmmm, un bon verre de " + boissonFavorite + " ! GLOUPS !");
 	}
 
 	public String acheter(String bien, int prix) {
@@ -86,7 +86,7 @@ public class Humain {
 		for (int i = 0; i < nbConnaissance - 1; i++) {
 			connais.append(memoire[i].getNom() + ", ");
 		}
-		connais.append(memoire[nbConnaissance-1].getNom());
+		connais.append(memoire[nbConnaissance-1].getNom()); 
 		parler("Je connais beaucoup de monde dont : " + connais);
 	}
 
