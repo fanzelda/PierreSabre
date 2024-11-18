@@ -22,12 +22,12 @@ public class Ronin extends Humain {
 		parler("Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre marchand !");
 		if (force >= adversaire.getReputation()) {
 			gagnerArgent(arg);
-			honneur = honneur + 1;
+			honneur++;
 			parler("Je t'ai eu petit yakusa!");
 			adversaire.perdre();
 		}
 		else {
-			honneur = honneur - 1;
+			honneur--;
 			perdreArgent(arg);
 			parler("J'ai perdu contre ce yakuza, mon honneur et ma bourse en ont pris un coup.");
 			adversaire.gagner(getArgent());

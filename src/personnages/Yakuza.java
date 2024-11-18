@@ -26,13 +26,13 @@ public class Yakuza extends Humain {
 	public void perdre() {
 		int arg = getArgent();
 		perdreArgent(arg);
-		reputation = reputation - 1;
+		reputation--;
 		parler("J'ai perdu mon duel et mes " + arg + " sous, snif... J'ai déshonoré le clan de " + clan);
 	}
 
 	public void gagner(int gain) {
 		gagnerArgent(gain);
-		reputation = reputation + 1;
+		reputation++;
 		parler("Ce ronin pensait vraiment battre " + getNom() + " du clan des " + clan + " ? Je l'ai dépouillé de ses "
 				+ gain + " sous.");
 	}
